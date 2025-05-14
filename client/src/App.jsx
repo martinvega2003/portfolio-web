@@ -1,11 +1,14 @@
-import React from "react"
+import React, {useContext} from "react"
+import { ThemeModeProvider } from "./context/ThemeModeContext.jsx"
+import Button from "./components/Button.jsx"
 
 function App() {
 
   return (
-    <div className="text-center text-7xl text-red-500">
-      App
-    </div>
+    <ThemeModeProvider>
+      <div className='text-5xl text-amber-300 dark:text-amber-700 dark:bg-gray-800'>App</div>
+      <Button />
+    </ThemeModeProvider>
   )
 }
 
