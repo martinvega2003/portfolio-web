@@ -1,12 +1,12 @@
 import React from 'react'
 import HeroSection from './section/HeroSection'
-import Button from '../components/Button'
+import AboutMeSection from './section/AboutMeSection'
 
 const Mainpage = () => {
   return (
     <main>
       <HeroSection />
-      <Button />
+      <AboutMeSection />
     </main>
   )
 }
