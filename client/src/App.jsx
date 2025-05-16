@@ -7,6 +7,7 @@ import Form from "./pages/Form"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import bgImageUrl from './images/working-bg.webp'
+import ScrollToTop from "./components/ScrollToTop"
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
                 //backgroundAttachment: "scroll", // Ensures smooth scrolling
               }}
             ></div>
+            <ScrollToTop />
             <Navbar />
             <Routes>
               <Route path="/" element={<Mainpage />} />
