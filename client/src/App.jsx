@@ -4,6 +4,7 @@ import { ThemeModeProvider } from "./context/ThemeModeContext"
 import { LanguageProvider } from "./context/LanguageContext"
 import Mainpage from "./pages/Mainpage"
 import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
 import bgImageUrl from './images/working-bg.webp'
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Mainpage />} />
             </Routes>
+            <Footer />
           </BrowserRouter>
         </ThemeModeProvider>
       </LanguageProvider>
