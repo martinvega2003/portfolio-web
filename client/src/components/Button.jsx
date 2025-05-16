@@ -1,9 +1,9 @@
-import React, { useContext } from 'react'
-import { ThemeModeContext } from '../context/ThemeModeContext'
+import React from 'react'
+import { useTheme } from '../context/ThemeModeContext';
 
 const Button = () => {
 
-  const { darkMode, setDarkMode } = useContext(ThemeModeContext);
+  const { darkMode, setDarkMode } = useTheme();
 
   return (
       <button onClick={() => setDarkMode(!darkMode)}>Button</button>

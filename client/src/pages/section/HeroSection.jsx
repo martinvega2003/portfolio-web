@@ -1,7 +1,7 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ThemeModeContext } from "../../context/ThemeModeContext";
+import { useTheme } from '../../context/ThemeModeContext';
 import { useLanguage } from '../../context/LanguageContext';
 import { FaCopy } from "react-icons/fa";
 import heroImg from "../../images/hero-image-v2.png";
@@ -9,7 +9,7 @@ import trees from "../../images/black-trees.png";
 import clouds from "../../images/clouds.png";
 
 const HeroSection = () => {
-  const { darkMode } = useContext(ThemeModeContext)
+  const { darkMode } = useTheme();
   const { language } = useLanguage();
 
   const [copied, setCopied] = useState(false);
