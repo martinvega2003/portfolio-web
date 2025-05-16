@@ -1,12 +1,25 @@
 import React from 'react'
-import { useTheme } from '../context/ThemeModeContext';
 
-const Button = () => {
+const Button = ({shape = 'rounded', variant = 'default', onClick, className, children}) => {
 
-  const { darkMode, setDarkMode } = useTheme();
+  let style = `
+    ${shape === 'rounded' ? 'rounded-[50px] ' : shape === 'rounded-light' ? 'rounded-md ' : ''}
+    hover:bg-transparent px-4 sm:px-8 py-2 text-xs sm:text-sm md:text-md border-2 transition duration-300 cursor-pointer
+  `
+
+  switch (variant) {
+    case 'default':
+      style += ' bg-blue-900 border-blue-900 text-white hover:text-blue-900 '
+      break;
+    case 'dark':
+      style += ' bg-white border-white text-gray-800 hover:text-white '
+      break;
+  }
 
   return (
-      <button onClick={() => setDarkMode(!darkMode)}>Button</button>
+      <button onClick={onClick} className={style}>
+        {children}
+      </button>
   )
 }
 
