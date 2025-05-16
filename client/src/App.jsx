@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { ThemeModeProvider } from "./context/ThemeModeContext"
 import { LanguageProvider } from "./context/LanguageContext"
 import Mainpage from "./pages/Mainpage"
+import Form from "./pages/Form"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import bgImageUrl from './images/working-bg.webp'
@@ -25,6 +26,7 @@ function App() {
             <Navbar />
             <Routes>
               <Route path="/" element={<Mainpage />} />
+              <Route path="/form" element={<Form />} />
             </Routes>
             <Footer />
           </BrowserRouter>
