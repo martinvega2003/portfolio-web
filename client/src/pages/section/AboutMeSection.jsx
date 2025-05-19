@@ -93,11 +93,11 @@ const AboutMeSection = () => {
               { name: "JavaScript", color: "bg-yellow-500 text-white" },
               { name: "React", color: "bg-blue-600 text-white" },
               { name: "PostgreSQL", color: "bg-green-600 text-white" },
-              { name: "Node.js / Express", color: "bg-white text-primary" },
+              { name: "Node.js / Express", color: "bg-white text-gray-800" },
             ].map((skill, index) => (
               <motion.div
                 key={index}
-                className={`relative z-10 px-6 py-3 rounded-lg ${skill.color} text-xl font-medium transition duration-300 hover:scale-125 cursor-pointer`}
+                className={`relative z-10 px-6 py-3 rounded-lg ${skill.color} text-xl font-medium transition duration-300 hover:scale-115 cursor-pointer`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.3 }}
