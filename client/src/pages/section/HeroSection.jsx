@@ -65,7 +65,7 @@ const HeroSection = () => {
               </span>
               <button
                 onClick={handleCopy}
-                className="text-gray-100 hover:text-blue-800 transition-colors"
+                className="text-gray-100 hover:text-blue-800 transition-colors cursor-pointer"
                 title="Copy Email"
               >
                 <FaCopy />
@@ -73,7 +73,7 @@ const HeroSection = () => {
             </motion.div>
             {copied && (
               <span className="text-xs text-green-400 mt-1 block">
-                Copied!
+                {language === "en" ? "Copied!" : "Copiado!"}
               </span>
             )}
 
