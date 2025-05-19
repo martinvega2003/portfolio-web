@@ -52,24 +52,9 @@
   position: absolute;
   top: 30%;
   left: -200px;
-  animation: ufo-fly 90s linear infinite;
+  animation: ufo-visit 15s linear infinite;
   opacity: 0.8;
 }
-
-.moon {
-  background: url('../src/images/Moon.png') no-repeat center center;
-  background-size: contain;
-  width: 300px;
-  height: 300px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  pointer-events: none;
-  animation: parallax-moon 10s ease-in-out infinite alternate;
-}
-
   
   @keyframes move-stars {
     from {
@@ -111,21 +96,46 @@
   }
 }
 
-@keyframes ufo-fly {
+@keyframes ufo-visit {
   0% {
     left: -200px;
+    top: 30%;
+    transform: scale(0.7);
+  }
+  20% {
+    left: 40vw;
+    top: 30%;
+    transform: scale(0.7);
+  }
+  40% {
+    left: 40vw;
+    top: 30%;
+    transform: scale(0.7);
+  }
+  50% {
+    left: 45vw;
+    top: 28%;
+    transform: scale(2);
+  }
+  60% {
+    left: 45vw;
+    top: 28%;
+    transform: scale(2);
+  }
+  70% {
+    left: 80vw;
+    top: 10vw;
+    transform: scale(0.5);
+  }
+  80% {
+    left: 100vw;
+    top: 10vw;
+    transform: scale(0.5);
   }
   100% {
-    left: 110%;
-  }
-}
-
-@keyframes parallax-moon {
-  0% {
-    transform: translate(-48%, -52%);
-  }
-  100% {
-    transform: translate(-52%, -48%);
+    left: 120vw;
+    top: 30%;
+    transform: scale(1);
   }
 }
 
@@ -150,7 +160,7 @@
   position: absolute;
   bottom: 10%;
   left: -200px;
-  animation: float-up 80s linear infinite;
+  animation: float-up 20s linear infinite;
   opacity: 0.8;
 }
 
@@ -178,10 +188,14 @@
 
 @keyframes float-up {
   0% {
-    left: -200px;
+    left: 100vw;
+    bottom: -150px;
+    transform: scale(0.3);
   }
   100% {
-    left: 110%;
+    left: -120px;
+    bottom: 100vh;
+    transform: scale(1.5);
   }
 }
 
