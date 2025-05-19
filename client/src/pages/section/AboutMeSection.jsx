@@ -17,7 +17,7 @@ const AboutMeSection = () => {
       <div className="w-full flex flex-col items-center">
         {/* About Me Text Section */}
         <motion.div
-          className='w-fit mx-3 sm:mx-12 flex flex-col items-center md:items-start md:flex-row-reverse md:justify-around my-12 bg-transparent dark:bg-gray-800 dark:shadow-[0_10px_30px_10px_rgba(139,92,246,0.6)]'
+          className='w-fit mx-3 sm:mx-12 flex flex-col items-center md:items-start md:flex-row-reverse md:justify-around my-12 bg-transparent dark:bg-gray-800 rounded-4xl shadow-2xl dark:shadow-[0_10px_30px_10px_rgba(139,92,246,0.6)]'
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
@@ -59,7 +59,7 @@ const AboutMeSection = () => {
           </div>
           {/* Image or Avatar */}
           <motion.div
-            className="w-full md:w-2/5 h-auto flex justify-center p-8 mt-6 md:mt-0"
+            className="w-full md:w-2/5 h-auto flex justify-center mt-6 md:mt-0 overflow-hidden"
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -68,7 +68,7 @@ const AboutMeSection = () => {
             <img
               src={professionalPic || "https://via.placeholder.com/200"}
               alt="Martin Vega"
-              className='relative z-10 w-full h-auto rounded-xl border-2 border-gray-800 dark:border-purple-500'
+              className='relative z-10 w-full h-auto rounded-l-4xl'
             />
           </motion.div>
         </motion.div>
