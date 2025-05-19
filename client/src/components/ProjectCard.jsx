@@ -8,9 +8,9 @@ export const ProjectCard = ({ project, theme, language }) => {
     return (
         <div className={`ml-2 sm:ml-8 flex-grow flex text-gray-100
 					${project.id % 2 === 0 ? "flex-col lg:flex-row bg-gray-900" : "flex-col-reverse lg:flex-row-reverse bg-gray-700"} 
-					items-start sm:p-6 rounded-lg overflow-hidden cursor-pointer`}
+					items-start lg:p-6 xl:p-0 rounded-lg overflow-hidden cursor-pointer`}
 				>
-					<div className="flex flex-col w-full lg:w-1/2 p-3 sm:p-2 md:px-12 lg:px-4">
+					<div className="flex flex-col w-full lg:w-1/2 p-3 sm:p-6 md:px-4">
 						<div className="flex justify-start items-center mb-2">
 							<div className="mr-4 text-2xl sm:text-3xl md:text-4xl">{<project.icon />}</div>
 							<h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold">
@@ -25,7 +25,7 @@ export const ProjectCard = ({ project, theme, language }) => {
 							{project.technologies.map((tech, index) => (
 								<div 
 									key={index} 
-									className={"flex items-center text-xxs sm:text-sm hover:scale-110 transition duration-300 text-" + tech.color}
+									className={`flex items-center text-xxs sm:text-sm hover:scale-110 transition duration-300 ${tech.color}`}
 								>
 									<span className="text-md mr-1">{<tech.icon />}</span>
 									<span className="mr-3">{tech.name}</span>
@@ -55,8 +55,8 @@ export const ProjectCard = ({ project, theme, language }) => {
 							</a>
 						</div>
 					</div>
-					<div className="w-full lg:w-1/2 h-full flex justify-center items-center mt-1 sm:p-2 md:px-12 lg:px-4">
-						<img src={project.image} alt="" className="w-full h-auto sm:rounded-lg" />
+					<div className="w-full lg:w-1/2 h-full flex justify-center items-center lg:p-2 xl:p-0 lg:px-4 xl:px-0 lg:overflow-hidden">
+						<img src={project.image} alt="" className="w-full h-auto lg:rounded-lg xl:rounded-none" />
 					</div>
 				</div>
     );

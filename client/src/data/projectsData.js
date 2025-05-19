@@ -22,10 +22,10 @@ export const projectsData = [
     linkToCode: "https://github.com/martinvega2003/dentist-site-project-one",
     linkToDeployment: "https://dentist-site-project-one.vercel.app/",
     technologies: [
-      { name: "React", color: "cyan-300", icon: SiReact },
-      { name: "TailwindCSS", color: "blue-500", icon: SiTailwindcss },
-      { name: "Express.js", color: "yellow-300", icon: SiExpress },
-      { name: "PostgreSQL", color: "green-400", icon: SiPostgresql },
+      { name: "React", color: "text-cyan-300", icon: SiReact },
+      { name: "TailwindCSS", color: "text-blue-500", icon: SiTailwindcss },
+      { name: "Express.js", color: "text-yellow-300", icon: SiExpress },
+      { name: "PostgreSQL", color: "text-green-400", icon: SiPostgresql },
     ],
   },
   {
@@ -44,10 +44,10 @@ export const projectsData = [
     linkToCode: "https://github.com/martinvega2003/dentist-site-project-two",
     linkToDeployment: "https://dentist-site-project-two.vercel.app/",
     technologies: [
-      { name: "React", color: "cyan-300", icon: SiReact },
-      { name: "TailwindCSS", color: "blue-500", icon: SiTailwindcss },
-      { name: "Express.js", color: "yellow-300", icon: SiExpress },
-      { name: "PostgreSQL", color: "green-400", icon: SiPostgresql },
+      { name: "React", color: "text-cyan-300", icon: SiReact },
+      { name: "TailwindCSS", color: "text-blue-500", icon: SiTailwindcss },
+      { name: "Express.js", color: "text-yellow-300", icon: SiExpress },
+      { name: "PostgreSQL", color: "text-green-400", icon: SiPostgresql },
     ],
   },
   {
@@ -66,10 +66,10 @@ export const projectsData = [
     linkToCode: "https://github.com/martinvega2003/dentist-site-project-three",
     linkToDeployment: "https://dentist-site-project-three.vercel.app/",
     technologies: [
-      { name: "React", color: "cyan-300", icon: SiReact },
-      { name: "TailwindCSS", color: "blue-500", icon: SiTailwindcss },
-      { name: "Express.js", color: "yellow-300", icon: SiExpress },
-      { name: "PostgreSQL", color: "green-400", icon: SiPostgresql },
+      { name: "React", color: "text-cyan-300", icon: SiReact },
+      { name: "TailwindCSS", color: "text-blue-500", icon: SiTailwindcss },
+      { name: "Express.js", color: "text-yellow-300", icon: SiExpress },
+      { name: "PostgreSQL", color: "text-green-400", icon: SiPostgresql },
     ],
   },
   {
@@ -88,10 +88,10 @@ export const projectsData = [
     linkToCode: "https://github.com/martinvega2003/dentist-site-project-four",
     linkToDeployment: "https://dentist-site-project-four.vercel.app/",
     technologies: [
-      { name: "React", color: "cyan-300", icon: SiReact },
-      { name: "TailwindCSS", color: "blue-500", icon: SiTailwindcss },
-      { name: "Express.js", color: "yellow-300", icon: SiExpress },
-      { name: "PostgreSQL", color: "green-400", icon: SiPostgresql },
+      { name: "React", color: "text-cyan-300", icon: SiReact },
+      { name: "TailwindCSS", color: "text-blue-500", icon: SiTailwindcss },
+      { name: "Express.js", color: "text-yellow-300", icon: SiExpress },
+      { name: "PostgreSQL", color: "text-green-400", icon: SiPostgresql },
     ],
   },
 ];
