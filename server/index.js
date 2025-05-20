@@ -22,7 +22,11 @@ app.post("/api/contact", async (req, res) => {
     );
     res.status(200).json({ success: true });
   } catch (error) {
-    res.status(500).json({ error: "Database error" });
+    res.status(500).json({ 
+      error_message: error.message,
+      error_code: error.code,
+      error_detail: error.detail
+    });
   }
 });
 
