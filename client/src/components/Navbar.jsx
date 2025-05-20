@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { projectsData } from '../data/projectsData';
-import { FaBars, FaTimes, FaMoon, FaSun } from 'react-icons/fa';
+import { FaBars, FaTimes, FaMoon, FaSun, FaGlobe } from 'react-icons/fa';
 import { useLanguage } from '../context/LanguageContext';
 import { useTheme } from '../context/ThemeModeContext';
-import { FaGlobe } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
 import Button from './Button';
 
 const Navbar = () => {
@@ -12,6 +12,8 @@ const Navbar = () => {
 
   const [isExamplesOpen, setIsExamplesOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navigate = useNavigate()
 
   return (
     <header className='fixed left-1/2 -translate-x-1/2 top-5 w-[95%] bg-white dark:bg-gray-800 shadow-2xl rounded-xl z-50 transition duration-300'>
@@ -74,6 +76,7 @@ const Navbar = () => {
           <Button
             shape='rounded'
             variant={darkMode ? 'dark' : 'default'}
+            onClick={() => navigate('/form')}
           >
             {language === "en" ? "Contact Me" : "Contactame"}
           </Button>
@@ -125,6 +128,7 @@ const Navbar = () => {
     <Button
       shape='rounded'
       variant={darkMode ? 'dark' : 'default'}
+      onClick={() => navigate('/form')}
     >
       {language === "en" ? "Contact Me" : "Contactame"}
     </Button>

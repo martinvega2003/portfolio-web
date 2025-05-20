@@ -132,13 +132,13 @@ const HeroSection = () => {
               transition={{ duration: 1 }}
             >
               <Link 
-                to="/"
+                to="/form"
                 className='mt-8 w-64 py-3 text-sm md:text-md text-center text-blue-800 dark:text-black bg-white hover:bg-transparent hover:text-white border-white font-semibold border-2 shadow-lg hover:scale-110 transition duration-200'
               >
                 {language === "en" ? "Work Together" : "Trabajemos"}
               </Link>
               <a 
-                href="#"
+                href="#projects"
                 className='sm:mt-8 w-64 py-3 text-sm md:text-md text-center font-semibold border-2 shadow-lg hover:scale-110 transition duration-200 text-white bg-transparent hover:bg-white hover:text-blue-800 border-white'
               >
                 {language === "en" ? "See My Work" : "Ver Mi Trabajo"}
