@@ -4,7 +4,7 @@ const Button = ({shape = 'rounded', variant = 'default', onClick, className, chi
 
   let style = `
     ${shape === 'rounded' ? 'rounded-[50px] ' : shape === 'rounded-light' ? 'rounded-md ' : ''}
-    hover:bg-transparent px-4 sm:px-8 py-2 text-xs sm:text-sm md:text-md border-2 transition duration-300 cursor-pointer
+    hover:bg-transparent px-4 sm:px-8 py-1 text-lg border-2 transition duration-300 cursor-pointer
   `
 
   switch (variant) {
