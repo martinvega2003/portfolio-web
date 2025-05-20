@@ -22,7 +22,6 @@ const Form = () => {
     e.preventDefault();
     try {
       if (formData.name && formData.email && formData.message) {
-        alert(JSON.stringify(formData))
         await axios.post(`${api}/api/contact`, formData);
         toast.success(language === "en" ? "Message sent!" : "Mensaje enviado!")
         setFormData({ name: "", email: "", message: "" });
