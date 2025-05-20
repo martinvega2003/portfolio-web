@@ -8,6 +8,8 @@ import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import bgImageUrl from './images/working-bg.webp'
 import ScrollToTop from "./components/ScrollToTop"
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
 
@@ -21,9 +23,9 @@ function App() {
               style={{
                 backgroundImage: `url(${bgImageUrl})`,
                 zIndex: -1,
-                //backgroundAttachment: "scroll", // Ensures smooth scrolling
               }}
             ></div>
+            <ToastContainer position="top-right" autoClose={3000} />
             <ScrollToTop />
             <Navbar />
             <Routes>
