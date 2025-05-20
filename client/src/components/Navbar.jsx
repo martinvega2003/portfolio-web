@@ -92,18 +92,10 @@ const Navbar = () => {
         )}
       </nav>
 
-{/* Mobile menu (FAQ style) */}
+{/* Mobile menu */}
 <div
-  className={`
-    sm:hidden
-    w-full
-    bg-white dark:bg-gray-800
-    rounded-b-xl
-    shadow-2xl
-    overflow-hidden
-    transition-all duration-300
-    ${isMenuOpen ? 'max-h-[500px] py-6' : 'max-h-0 py-0'}
-  `}
+  className={`sm:hidden w-full bg-white dark:bg-gray-800 rounded-b-xl shadow-2xl overflow-hidden transition-all duration-300
+    ${isMenuOpen ? 'max-h-[500px] py-6' : 'max-h-0 py-0'}`}
   style={{ zIndex: 40 }}
 >
   <div className="flex flex-col items-center gap-3">
