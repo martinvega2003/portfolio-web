@@ -1,6 +1,23 @@
 @import "tailwindcss";
 @variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
+/* toast style for light theme mode */
+.toast-light-mode-style {
+  background: #1a202c !important; 
+  color: #fff !important; 
+  border-radius: 8px !important;
+}
+
+/* Make the close button white for light mode toast */
+.toast-light-mode-style .Toastify__close-button {
+  color: #fff !important;
+  opacity: 0.9 !important;
+}
+
+/* On hover make it even brighter */
+.toast-light-mode-style .Toastify__close-button:hover {
+  color: #e0e0e0 !important;
+}
 
 /* Stars Effect */
 .stars {
