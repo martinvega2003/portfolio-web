@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { projectsData } from '../data/projectsData';
-import { FaBars, FaTimes, FaMoon, FaSun } from 'react-icons/fa';
+import { FaBars, FaTimes, FaMoon, FaSun, FaGlobe } from 'react-icons/fa';
 import { useLanguage } from '../context/LanguageContext';
 import { useTheme } from '../context/ThemeModeContext';
-import { FaGlobe } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
 import Button from './Button';
 
 const Navbar = () => {
@@ -12,6 +12,8 @@ const Navbar = () => {
 
   const [isExamplesOpen, setIsExamplesOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navigate = useNavigate()
 
   return (
     <header className='fixed left-1/2 -translate-x-1/2 top-5 w-[95%] bg-white dark:bg-gray-800 shadow-2xl rounded-xl z-50 transition duration-300'>
@@ -32,24 +34,24 @@ const Navbar = () => {
             <FaGlobe className="text-xl" />
           </button>
         </div>  
-        <div className={`absolute bg-white dark:bg-gray-800 w-full left-0 sm:w-fit sm:bg-gradient-to-r sm:from-transparent sm:to-transparent sm:relative ${isMenuOpen ? "translate-y-32 sm:translate-y-0" : "-translate-y-full sm:translate-y-0"} rounded-xl sm:top-0 py-6 sm:py-0 flex flex-col sm:flex-row justify-start items-center gap-3 sm:gap-0 sm:space-x-6 transition-all duration-300`}>
+        <div className='relative w-fit rounded-xl top-0 hidden sm:flex flex-row justify-start items-center space-x-6 transition-all duration-300'>
           <a
             href="/"
-            className='relative group text-lg transform hover:scale-110 text-gray-800 dark:text-white hover:text-blue-900 dark:hover:text-blue-500 transition duration-300'
+            className='relative group text-md md:text-lg transform hover:scale-110 text-gray-800 dark:text-white hover:text-blue-900 dark:hover:text-blue-500 transition duration-300'
           >
             {language === "en" ? "Home" : "Inicio"}
             <span className="absolute left-1/2 bottom-0 w-0 h-0.5 bg-blue-900 dark:bg-blue-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
           </a>
           <a
             href="#about"
-            className='relative group text-lg transform hover:scale-110 text-gray-800 dark:text-white hover:text-blue-900 dark:hover:text-blue-500 transition duration-300'
+            className='relative group text-md md:text-lg transform hover:scale-110 text-gray-800 dark:text-white hover:text-blue-900 dark:hover:text-blue-500 transition duration-300'
           >
             {language === "en" ? "About" : "Sobre mi"}
             <span className="absolute left-1/2 bottom-0 w-0 h-0.5 bg-blue-900 dark:bg-blue-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
           </a>
           <a
             href='#projects'
-            className='relative group cursor-pointer text-lg text-gray-800 dark:text-white hover:text-blue-900 dark:hover:text-blue-500 hover:scale-110 transition duration-300'
+            className='relative group cursor-pointer text-md md:text-lg text-gray-800 dark:text-white hover:text-blue-900 dark:hover:text-blue-500 hover:scale-110 transition duration-300'
             onMouseEnter={() => setIsExamplesOpen(true)}
             onMouseLeave={() => setIsExamplesOpen(false)}
           >
@@ -74,6 +76,7 @@ const Navbar = () => {
           <Button
             shape='rounded'
             variant={darkMode ? 'dark' : 'default'}
+            onClick={() => navigate('/form')}
           >
             {language === "en" ? "Contact Me" : "Contactame"}
           </Button>
@@ -88,6 +91,41 @@ const Navbar = () => {
           </div>
         )}
       </nav>
+
+{/* Mobile menu */}
+<div
+  className={`sm:hidden w-full bg-white dark:bg-gray-800 rounded-b-xl shadow-2xl overflow-hidden transition-all duration-300
+    ${isMenuOpen ? 'max-h-[500px] py-6' : 'max-h-0 py-0'}`}
+  style={{ zIndex: 40 }}
+>
+  <div className="flex flex-col items-center gap-3">
+    <a
+      href="/"
+      className='relative group text-md md:text-lg transform hover:scale-110 text-gray-800 dark:text-white hover:text-blue-900 dark:hover:text-blue-500 transition duration-300'
+    >
+      {language === "en" ? "Home" : "Inicio"}
+    </a>
+    <a
+      href="#about"
+      className='relative group text-md md:text-lg transform hover:scale-110 text-gray-800 dark:text-white hover:text-blue-900 dark:hover:text-blue-500 transition duration-300'
+    >
+      {language === "en" ? "About" : "Sobre mi"}
+    </a>
+    <a
+      href='#projects'
+      className='relative group cursor-pointer text-md md:text-lg text-gray-800 dark:text-white hover:text-blue-900 dark:hover:text-blue-500 hover:scale-110 transition duration-300'
+    >
+      {language === "en" ? "Projects" : "Proyectos"}
+    </a>
+    <Button
+      shape='rounded'
+      variant={darkMode ? 'dark' : 'default'}
+      onClick={() => navigate('/form')}
+    >
+      {language === "en" ? "Contact Me" : "Contactame"}
+    </Button>
+  </div>
+</div>
     </header>
   );
 };

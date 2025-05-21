@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 import { Link } from "react-router-dom";
 import axios from "axios"
+import { toast } from "react-toastify";
 
 const Form = () => {
 
@@ -11,7 +12,6 @@ const Form = () => {
   const { language } = useLanguage();
 
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-  const [sent, setSent] = useState(false)
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,18 +22,14 @@ const Form = () => {
     e.preventDefault();
     try {
       if (formData.name && formData.email && formData.message) {
-        alert(JSON.stringify(formData))
         await axios.post(`${api}/api/contact`, formData);
-        setSent(true);
-        setTimeout(() => {
-          setSent(false);
-        }, 2000);
+        toast.success(language === "en" ? "Message sent!" : "Mensaje enviado!")
         setFormData({ name: "", email: "", message: "" });
       } else {
-        alert(language === "en" ? "Please fill all fields." : "Por favor, completa todos los campos.");
+        toast.warning(language === "en" ? "Please fill all fields." : "Por favor, completa todos los campos.");
       }
     } catch (error) {
-      alert(error)
+      toast.error(language === 'en' ? "Failed to send message. Please try again." : "Error al enviar el mensaje. Por favor, vuelva a intentarlo.");
     }
   };
 
@@ -106,11 +102,6 @@ const Form = () => {
             className='w-full h-28 sm:h-36 md:h-52 bg-transparent p-2 mb-3 rounded-lg dark:text-white border-gray-800 dark:border-gray-300 focus:border-blue-900 dark:focus:border-purple-500 focus:shadow-[0_0_8px_2px] dark:focus:shadow-[0_0_8px_2px] focus:shadow-blue-900 dark:focus:shadow-blue-600 border-2 transition-all duration-300 placeholder:text-gray-400 outline-none'
           ></textarea>
         </motion.form>
-        {sent && (
-          <span className="text-xs sm:text-sm md:text-lg text-green-400 block">
-            {language === "en" ? "Message sent!" : "Mensaje enviado!"}
-          </span>
-        )}
         <div className="relative z-20 w-full p-2 flex items-center justify-between gap-3">
           <Link 
             to="/" 

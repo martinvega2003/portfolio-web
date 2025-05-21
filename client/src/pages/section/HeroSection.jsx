@@ -24,12 +24,8 @@ const HeroSection = () => {
   };
 
   return (
-    <motion.div
+    <div
       className='w-full h-fit py-40 md:pb-96 overflow-hidden relative bg-gradient-to-b from-blue-400 to-blue-300 dark:bg-gradient-to-b dark:from-black dark:to-gray-800'
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.3, ease: "easeOut" }}
     >
       {/* Background Animations */}
       {!darkMode && (
@@ -50,7 +46,12 @@ const HeroSection = () => {
           <div className="ufo"></div>
         </div>
       )}
-      <div className="w-full px-3 sm:px-20 relative">
+      <motion.div 
+        className="w-full px-3 sm:px-20 relative"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
+      >
         <div className="w-full flex flex-col md:flex-row justify-start items-center">
           <div className="w-full md:w-1/2 text-center md:text-left mb-9 md:mb-0">
             {/* Email Section */}
@@ -132,13 +133,13 @@ const HeroSection = () => {
               transition={{ duration: 1 }}
             >
               <Link 
-                to="/"
+                to="/form"
                 className='mt-8 w-64 py-3 text-sm md:text-md text-center text-blue-800 dark:text-black bg-white hover:bg-transparent hover:text-white border-white font-semibold border-2 shadow-lg hover:scale-110 transition duration-200'
               >
                 {language === "en" ? "Work Together" : "Trabajemos"}
               </Link>
               <a 
-                href="#"
+                href="#projects"
                 className='sm:mt-8 w-64 py-3 text-sm md:text-md text-center font-semibold border-2 shadow-lg hover:scale-110 transition duration-200 text-white bg-transparent hover:bg-white hover:text-blue-800 border-white'
               >
                 {language === "en" ? "See My Work" : "Ver Mi Trabajo"}
@@ -169,8 +170,8 @@ const HeroSection = () => {
             alt=""
           />
         )}
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   )
 }
 

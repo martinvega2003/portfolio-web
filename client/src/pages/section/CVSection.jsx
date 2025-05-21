@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useLanguage } from "../../context/LanguageContext";
 import CVEnglishPath from "../../data/Martin Vega - Web Developer - CV.pdf"
 import CVSpanishPath from "../../data/Martin Vega - Desarrollador Web - CV.pdf"
-import professionalPic from "../../images/professional-pic.jpeg"
+import professionalPic from "../../images/professional-pic.png"
 
 const CVSection = () => {
   const { language } = useLanguage();

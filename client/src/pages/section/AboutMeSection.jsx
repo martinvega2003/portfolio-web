@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useLanguage } from "../../context/LanguageContext";
 import { ExtraDataSection } from "./ExtraDataSection";
-import professionalPic from "../../images/professional-pic.jpeg"
+import professionalPic from "../../images/professional-pic.png"
 
 const AboutMeSection = () => {
   const { language } = useLanguage();
@@ -17,14 +17,14 @@ const AboutMeSection = () => {
       <div className="w-full flex flex-col items-center">
         {/* About Me Text Section */}
         <motion.div
-          className='w-fit mx-3 sm:mx-12 flex flex-col items-center md:items-start md:flex-row-reverse md:justify-around my-12 bg-transparent dark:bg-gray-800 rounded-4xl shadow-2xl dark:shadow-[0_10px_30px_10px_rgba(139,92,246,0.6)]'
+          className='w-fit mx-3 sm:mx-12 flex flex-col items-center md:flex-row-reverse md:justify-around md:items-end my-0 md:my-12 bg-transparent md:dark:bg-gray-800 md:rounded-4xl md:shadow-2xl md:dark:shadow-[0_10px_30px_10px_rgba(139,92,246,0.6)]'
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
 
           <div
-            className="relative z-10 w-full md:w-3/5 p-8 rounded-3xl mb-6 md:mb-12 lg:mb-20"
+            className="relative z-10 w-full md:w-3/5 p-8 rounded-tr-[50px] rounded-bl-[50px] shadow-2xl dark:shadow-[0_10px_30px_10px_rgba(139,92,246,0.6)] md:shadow-none dark:md:shadow-none mt-12 md:mt-0 mb-6 md:mb-12 lg:mb-20"
           >
             {/* Header Section with Name */}
             <motion.div
@@ -68,7 +68,7 @@ const AboutMeSection = () => {
             <img
               src={professionalPic || "https://via.placeholder.com/200"}
               alt="Martin Vega"
-              className='relative z-10 w-full h-auto rounded-l-4xl'
+              className='relative z-10 w-full h-auto'
             />
           </motion.div>
         </motion.div>
