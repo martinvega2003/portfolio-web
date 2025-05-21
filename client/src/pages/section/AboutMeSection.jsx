@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useLanguage } from "../../context/LanguageContext";
 import { ExtraDataSection } from "./ExtraDataSection";
-import professionalPic from "../../images/professional-pic.jpeg"
+import professionalPic from "../../images/professional-pic.png"
 
 const AboutMeSection = () => {
   const { language } = useLanguage();
