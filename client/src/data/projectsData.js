@@ -1,8 +1,9 @@
 import imgOne from "../images/project-manager-thumbnail.png"
 import imgTwo from "../images/software-website-thumbnail.png"
 import imgThree from "../images/redux-to-do-app-thumbnail.png"
-import { SiReact, SiTailwindcss, SiExpress, SiPostgresql, SiRedux } from "react-icons/si";
-import { FaLaptopCode, FaTasks } from "react-icons/fa";
+import imgFour from "../images/pern-auth-thumbnail.png"
+import { SiReact, SiTailwindcss, SiExpress, SiTypescript, SiZod, SiPostgresql, SiRedux } from "react-icons/si";
+import { FaLaptopCode, FaTasks, FaUserShield } from "react-icons/fa";
 import { BsCalendarCheck } from "react-icons/bs";
 
 export const projectsData = [
@@ -69,6 +70,30 @@ export const projectsData = [
       { name: "React", color: "text-cyan-300", icon: SiReact },
       { name: "TailwindCSS", color: "text-blue-500", icon: SiTailwindcss },
       { name: "Redux-toolkit", color: "text-purple-500", icon: SiRedux },
+    ],
+  },
+  {
+    id: 4,
+    number: "IV",
+    icon: FaUserShield, 
+    title: {
+      en: "MERN Auth with TypeScript",
+      es: "Autenticación MERN con TypeScript",
+    },
+    image: imgFour || "https://via.placeholder.com/300",
+    description: {
+      en: "A full-featured authentication system built with the MERN stack, TypeScript, and Zod. Includes user registration, login, JWT-based authentication, protected routes, and form validation with Zod. Provides a secure and scalable foundation for modern web applications.",
+      es: "Un sistema de autenticación completo desarrollado con MERN, TypeScript y Zod. Incluye registro de usuarios, inicio de sesión, autenticación basada en JWT, rutas protegidas y validación de formularios con Zod. Proporciona una base segura y escalable para aplicaciones web modernas.",
+    },
+    linkToCode: "https://github.com/martinvega2003/pern-auth-with-zod-and-typescript",
+    linkToDeployment: "https://frontend-pern-auth-with-typescript.vercel.app", // Replace with your Render/Vercel link
+    technologies: [
+      { name: "React", color: "text-cyan-300", icon: SiReact },
+      { name: "TailwindCSS", color: "text-blue-500", icon: SiTailwindcss },
+      { name: "Express.js", color: "text-yellow-300", icon: SiExpress },
+      { name: "PostgreSQL", color: "text-green-400", icon: SiPostgresql },
+      { name: "TypeScript", color: "text-blue-400", icon: SiTypescript },
+      { name: "Zod", color: "text-pink-400", icon: SiZod }, 
     ],
   },
 ];
